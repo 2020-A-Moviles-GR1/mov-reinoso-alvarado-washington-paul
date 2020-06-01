@@ -1,2 +1,2 @@
 # mov-reinoso-alvarado-washington-paul
-primer cambio
+primer cambio Gk
