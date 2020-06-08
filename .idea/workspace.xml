@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c02a39ba-834e-4736-8cfa-9630ddfae32d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/division" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/licencia.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paul-reinoso.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sumar" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-kotlin/src/Main.Kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +31,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1d2SFThUcZgdp0gvarVuHy3uRYo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591621592799</updated>
-      <workItem from="1591621628784" duration="1790000" />
+      <workItem from="1591621628784" duration="2082000" />
     </task>
     <servers />
   </component>
