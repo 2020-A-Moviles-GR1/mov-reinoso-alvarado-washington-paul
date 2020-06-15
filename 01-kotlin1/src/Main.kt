@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.collections.ArrayList
 
 fun main (args:Array<String>  ){
 println("hola mundo")
@@ -38,6 +39,7 @@ println("hola mundo")
 
     val esSueldoMayorAlEstablecido = if(sueldo==12.20) true else false //if else rapidamente
     //expresion ? X : Y
+    imprimirMensaje1()
 
 }
 //FUNCIONES
@@ -56,8 +58,73 @@ fun imprimirMensaje1(){ //unit = void
             null
     )
     calcularSueldo(sueldo = 12.00)
+    val arregloConstante: Array<Int> = arrayOf(1,2,3)  //no se puede añadir elementos
+    val arregloCumpleaños: ArrayList<Int> = arrayListOf(30,31,32,33,20)  //se puede añadir y eliminar elementos
+    println(arregloCumpleaños)
+    arregloCumpleaños.add(24)
+    println(arregloCumpleaños)
+    arregloCumpleaños.remove(30)
+    println(arregloCumpleaños)
+
+//sintasys de funciones pra iteracion
+    arregloCumpleaños
+            .forEach {
+            //    println("valores" + it) //la variable It que ofrece el ide es iterada
+            }
+
+    val respuestaArregloFE= arregloCumpleaños
+            .forEach{valorIteracion:Int->   //ejemplo no sirve
+             //           println("valor iteracion "+ valorIteracion)
+             //           println("valor con -1 = ${valorIteracion * - 1}")
+                    }
+    println(respuestaArregloFE)
+    arregloCumpleaños
+            .forEach(
+                    {valorIteracion:Int->
+                    //    println("valor iteracion "+ valorIteracion)
+                    }
+            )
+    arregloCumpleaños
+            .forEachIndexed { index:Int, i:Int ->
+           //     println("valor de iteracion"+ index)
+            }
+
+    val respuestaMap = arregloCumpleaños
+            .map { ietracion1 : Int->
+                ietracion1*-1
+            }
+    //println(respuestaMap)
+    //println(arregloCumpleaños)
+
+
+    val respuestaMapDos = arregloCumpleaños
+            .map { ietracion1 : Int->
+                val nuevoValor = ietracion1*-1
+                val otroValor = ietracion1*2
+                return@map otroValor.toString()
+            }
+    //println(respuestaMap)
+    //println(respuestaMapDos)
+    //println(arregloCumpleaños)
+
+    val respuestaFilter=arregloCumpleaños
+            .filter { iteracion : Int->
+                val esMayor23 = iteracion >25
+                return@filter esMayor23
+            }
+
+    arregloCumpleaños
+            .filter { iteracion : Int->
+                iteracion > 23
+            }
+
+    println(arregloCumpleaños)
+    println(respuestaFilter)
 
 }
+
+
+
 // funcion devolviendo valor
 
 fun calcularSueldo(
@@ -74,3 +141,24 @@ fun calcularSueldo(
     }
 
 }
+
+fun calcularSueldoEsp(
+        sueldo: Double,//requerido
+        tasa:Double =12.00, //valores por defecto!!
+
+        //calculoEspecial:Int?//pueden ser nulo
+        calculoEspecial:Int?=null//pueden ser nulo y no necesito enviarlo puedo obviarlo!
+): Double?{ //--->puedo retornar o no
+    if (calculoEspecial!=null){
+        return sueldo*tasa*calculoEspecial;//;opcionles
+    }else{
+        return sueldo*tasa
+    }
+
+}
+
+
+
+
+
+
