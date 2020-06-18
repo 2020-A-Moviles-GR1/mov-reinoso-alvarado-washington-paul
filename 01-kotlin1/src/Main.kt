@@ -1,3 +1,4 @@
+import java.security.PrivateKey
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -49,17 +50,17 @@ println("hola mundo")
     fun imprimirMensaje() : Int { //unit = void
     return 10;
     }
-fun imprimirMensaje1(){ //unit = void
-    calcularSueldo(1000.00,14.40,calculoEspecial = null)
-    calcularSueldo( tasa= 10.00, sueldo=120.00,calculoEspecial = null)
+fun imprimirMensaje1() { //unit = void
+    calcularSueldo(1000.00, 14.40, calculoEspecial = null)
+    calcularSueldo(tasa = 10.00, sueldo = 120.00, calculoEspecial = null)
     calcularSueldo(
             16.00,
             14.00,
             null
     )
     calcularSueldo(sueldo = 12.00)
-    val arregloConstante: Array<Int> = arrayOf(1,2,3)  //no se puede añadir elementos
-    val arregloCumpleaños: ArrayList<Int> = arrayListOf(30,31,32,33,20)  //se puede añadir y eliminar elementos
+    val arregloConstante: Array<Int> = arrayOf(1, 2, 3)  //no se puede añadir elementos
+    val arregloCumpleaños: ArrayList<Int> = arrayListOf(17, 18, 30, 31, 32, 33, 20)  //se puede añadir y eliminar elementos
     println(arregloCumpleaños)
     arregloCumpleaños.add(24)
     println(arregloCumpleaños)
@@ -69,60 +70,125 @@ fun imprimirMensaje1(){ //unit = void
 //sintasys de funciones pra iteracion
     arregloCumpleaños
             .forEach {
-            //    println("valores" + it) //la variable It que ofrece el ide es iterada
+                //    println("valores" + it) //la variable It que ofrece el ide es iterada
             }
 
-    val respuestaArregloFE= arregloCumpleaños
-            .forEach{valorIteracion:Int->   //ejemplo no sirve
-             //           println("valor iteracion "+ valorIteracion)
-             //           println("valor con -1 = ${valorIteracion * - 1}")
-                    }
+    val respuestaArregloFE = arregloCumpleaños
+            .forEach { valorIteracion: Int ->   //ejemplo no sirve
+                //           println("valor iteracion "+ valorIteracion)
+                //           println("valor con -1 = ${valorIteracion * - 1}")
+            }
     println(respuestaArregloFE)
     arregloCumpleaños
             .forEach(
-                    {valorIteracion:Int->
-                    //    println("valor iteracion "+ valorIteracion)
+                    { valorIteracion: Int ->
+                        //    println("valor iteracion "+ valorIteracion)
                     }
             )
     arregloCumpleaños
-            .forEachIndexed { index:Int, i:Int ->
-           //     println("valor de iteracion"+ index)
+            .forEachIndexed { index: Int, i: Int ->
+                //     println("valor de iteracion"+ index)
             }
 
     val respuestaMap = arregloCumpleaños
-            .map { ietracion1 : Int->
-                ietracion1*-1
+            .map { ietracion1: Int ->
+                ietracion1 * -1
             }
     //println(respuestaMap)
     //println(arregloCumpleaños)
 
 
     val respuestaMapDos = arregloCumpleaños
-            .map { ietracion1 : Int->
-                val nuevoValor = ietracion1*-1
-                val otroValor = ietracion1*2
+            .map { ietracion1: Int ->
+                val nuevoValor = ietracion1 * -1
+                val otroValor = ietracion1 * 2
                 return@map otroValor.toString()
             }
     //println(respuestaMap)
     //println(respuestaMapDos)
     //println(arregloCumpleaños)
 
-    val respuestaFilter=arregloCumpleaños
-            .filter { iteracion : Int->
-                val esMayor23 = iteracion >25
+    val respuestaFilter = arregloCumpleaños
+            .filter { iteracion: Int ->
+                val esMayor23 = iteracion > 25
                 return@filter esMayor23
             }
 
     arregloCumpleaños
-            .filter { iteracion : Int->
+            .filter { iteracion: Int ->
                 iteracion > 23
             }
 
-    println(arregloCumpleaños)
-    println(respuestaFilter)
+    //println(arregloCumpleaños)
+    //println(respuestaFilter)
 
+    val respuestaFilterMayordeedad = arregloCumpleaños
+            .filter { iteracion: Int ->
+                val esMayor23 = iteracion < 18
+                return@filter esMayor23 //arregglo que cumple la condicion
+            }
+
+    println(respuestaFilterMayordeedad)
+    //operador que encuentra al menos una ocurrencia
+    // ANY-> OR
+    // ALL-> AND
+    // AND-TUE todo lo demas falos
+    // OR todo es falso lo demas era verdadero
+    // 1)devolver un expreson (true/false)
+    // 2)devuelve un booleamo
+
+    val requestAny: Boolean = arregloCumpleaños.any { iterador: Int ->
+        return@any iterador < 18
+    }
+    println(requestAny)
+
+    val requestAll: Boolean = arregloCumpleaños.all { iterador: Int ->
+        return@all iterador > 18
+    }
+    println(requestAll)
+
+    // Operacion no solo sumas y restas sino aplicar formulas
+    // Reduce
+    //1) devuelve el acumulado
+    //2) debemos decirle en que valor empezar
+    //Existen
+    //arregloCumpleaños.reduceRight
+    //arregloCumpleaños.FoldRight
+
+    val respuestaReduce = arregloCumpleaños //acumulador es un auxiliar=0
+            .reduce { acumulador, iterador ->
+                return@reduce (acumulador + iterador) / arregloCumpleaños.size
+            }
+    println(respuestaReduce)
+
+// Podemos simepre poner los parentesis antes de las llaves,
+// pero si usamos un mas de un parametro usamos los parentecis
+
+    val respuestaFold = arregloCumpleaños //acumulador es un auxiliar=100
+            .fold( //le digo donde empezar
+                    100,{ acumulador, iterador ->
+                return@fold acumulador - iterador
+            }
+            )
+    println(respuestaFold)
+    // simular como bajaria nuestra vida en un juego
+    // reducir el daño 20%
+    // no hce daño >18
+    // si el operador retorna lo mismo se puede concatenar
+    val juego = arregloCumpleaños
+            .map { iterador ->
+                iterador*0.8
+            }
+            .filter { iterador ->
+                iterador > 18
+            }
+            .fold(100.00,{
+                acumunlador, iterador ->
+                return@fold acumunlador - iterador
+            }
+            )//.also { println() }
+    println(juego)
 }
-
 
 
 // funcion devolviendo valor
@@ -156,9 +222,41 @@ fun calcularSueldoEsp(
     }
 
 }
+// Clases Abstractas
 
+abstract class NumerosJava {  // val nuevosNumeros = Numeros(1,2)
+    protected val numeroUno: Int
+    private val numeroDos: Int
 
+    constructor(uno: Int, dos: Int) {
+        numeroUno = uno
+        numeroDos = dos
+    }
+}
 
+abstract class Numeros( // val nuevosNumeros = Numeros(1,2)
+        protected val numeroUno: Int,
+        protected val numeroDos: Int
+) {
+}
 
+class Suma(
+        uno: Int,
+        dos: Int
+) : Numeros(uno, dos) {
+    fun sumar():Int{
+        // this.uno
+        return this.numeroUno + this.numeroDos
+    }
+}
 
-
+class SumaDos(
+        public var uno: Int,
+        public var dos: Int
+) : Numeros(uno, dos) {
+    fun sumar():Int{
+        this.uno
+        this.dos
+        return this.numeroUno + this.numeroDos
+    }
+}
