@@ -216,9 +216,9 @@ fun imprimirMensaje1() { //unit = void
 
 
 fun imprimirNombre(nombre :String?){
-    println(nombre?.length)
-    println(nombre?.toInt())
-    println(nombre?.toDouble())
+    println(nombre?.length?.toInt())
+    //println(nombre?.toInt())
+    //println(nombre?.toDouble())
 
     val numeroCaracteres: Int ? = nombre?.length
 }
@@ -271,17 +271,6 @@ abstract class Numeros( // val nuevosNumeros = Numeros(1,2)
          var numeroDos: Int
 ) {
 }
-
-class Suma(
-        uno: Int,
-        dos: Int
-) : Numeros(uno, dos) {//herencia
-    fun sumar():Int{
-        // this.uno
-        return this.numeroUno + this.numeroDos
-    }
-}
-
 class SumaDos(
         public var uno: Int,
         public var dos: Int
@@ -292,7 +281,15 @@ class SumaDos(
         return this.numeroUno + this.numeroDos
     }
 }
-
+class Suma(
+        uno: Int,
+        dos: Int
+) : Numeros(uno, dos) {//herencia
+    fun sumar():Int{
+        // this.uno
+        return this.numeroUno + this.numeroDos
+    }
+}
 
 //Si quremos mas de un costructor!! NO deben ser excatamente iguales o nos dran errores
 // Para esto cambiamos los parametros que queremos ?
@@ -300,10 +297,10 @@ class SumarDosNumerosDos(
         uno: Int,
         dos: Int
 ) : Numeros(uno, dos) {
+
     init { //SEMPRE QUE SE EJECUTA UN COSTRUCTOR EJECUTA PRIMERO EL INIT
         println("Hola INIT")
     }
-
     constructor(uno: Int?, dos: Int) : this(
             if (uno == null) 0 else uno,
             dos
