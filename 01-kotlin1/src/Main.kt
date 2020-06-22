@@ -143,7 +143,7 @@ fun imprimirMensaje1() { //unit = void
     println(requestAny)
 
     val requestAll: Boolean = arregloCumpleaños.all { iterador: Int ->
-        return@all iterador > 18
+        return@all iterador > 15
     }
     println(requestAll)
 
@@ -171,6 +171,16 @@ fun imprimirMensaje1() { //unit = void
             }
             )
     println(respuestaFold)
+
+    // forEach -> nada
+    // map -> Arreglo
+    // filter -> Arreglo
+    // all -> Booleano
+    // any -> Booleano
+    // reduce -> valor
+    // fold -> valor
+    
+
     // simular como bajaria nuestra vida en un juego
     // reducir el daño 20%
     // no hce daño >18
@@ -188,8 +198,30 @@ fun imprimirMensaje1() { //unit = void
             }
             )//.also { println() }
     println(juego)
+
+    val nuevoNumeroUno = SumarDosNumerosDos(1,1)
+    val nuevoNumeroDos = SumarDosNumerosDos(null,1)
+    val nuevoNumeroTre = SumarDosNumerosDos(1,null)
+    val nuevoNumeroCuatro = SumarDosNumerosDos(null,null)
+    println(SumarDosNumerosDos.arregloNumeros)
+    SumarDosNumerosDos.agregarNumero(1)
+    println(SumarDosNumerosDos.arregloNumeros)
+    SumarDosNumerosDos.eliminarNumero(0)
+    println(SumarDosNumerosDos.arregloNumeros)
+
+    val  nombre : String?=null
+    imprimirNombre("Paul")
+
 }
 
+
+fun imprimirNombre(nombre :String?){
+    println(nombre?.length)
+    println(nombre?.toInt())
+    println(nombre?.toDouble())
+
+    val numeroCaracteres: Int ? = nombre?.length
+}
 
 // funcion devolviendo valor
 
@@ -226,7 +258,7 @@ fun calcularSueldoEsp(
 
 abstract class NumerosJava {  // val nuevosNumeros = Numeros(1,2)
     protected val numeroUno: Int
-    private val numeroDos: Int
+    protected val numeroDos: Int
 
     constructor(uno: Int, dos: Int) {
         numeroUno = uno
@@ -235,15 +267,15 @@ abstract class NumerosJava {  // val nuevosNumeros = Numeros(1,2)
 }
 
 abstract class Numeros( // val nuevosNumeros = Numeros(1,2)
-        protected val numeroUno: Int,
-        protected val numeroDos: Int
+         var numeroUno: Int,
+         var numeroDos: Int
 ) {
 }
 
 class Suma(
         uno: Int,
         dos: Int
-) : Numeros(uno, dos) {
+) : Numeros(uno, dos) {//herencia
     fun sumar():Int{
         // this.uno
         return this.numeroUno + this.numeroDos
@@ -260,3 +292,50 @@ class SumaDos(
         return this.numeroUno + this.numeroDos
     }
 }
+
+
+//Si quremos mas de un costructor!! NO deben ser excatamente iguales o nos dran errores
+// Para esto cambiamos los parametros que queremos ?
+class SumarDosNumerosDos(
+        uno: Int,
+        dos: Int
+) : Numeros(uno, dos) {
+    init { //SEMPRE QUE SE EJECUTA UN COSTRUCTOR EJECUTA PRIMERO EL INIT
+        println("Hola INIT")
+    }
+
+    constructor(uno: Int?, dos: Int) : this(
+            if (uno == null) 0 else uno,
+            dos
+    ) { //aqui despues de recibir los parametros ya podemos escribir nuestro codigo
+        println("Hola 1")
+    }
+
+    constructor(uno: Int, dos: Int?) : this(
+            uno,
+            if (dos == null) 0 else dos
+    ) {
+        println("Hola 2")
+    }
+
+    constructor(uno: Int?, dos: Int?) : this(
+            if (uno == null) 0 else uno,
+            if (dos == null) 0 else dos
+    ) {
+        println("Hola 3")
+    }
+    companion object {//para toda declaracion estatica
+        val arregloNumeros = arrayListOf(1,2,3,4)
+        fun agregarNumero(nuevoNumero:Int){
+            this.arregloNumeros.add(nuevoNumero)
+        }
+        fun eliminarNumero(posicionNumero:Int){
+            this.arregloNumeros.removeAt(posicionNumero)
+        }
+
+    }
+
+
+}
+
+
