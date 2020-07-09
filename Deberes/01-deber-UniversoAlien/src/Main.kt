@@ -1,14 +1,23 @@
-import java.io.File
-import java.nio.file.Files.write
-import java.nio.file.StandardOpenOption
-import java.io.BufferedReader
 
 fun main ( args:Array<String> ){
-    //var menu=Menu()
-    //menu.opcionesMenu()
-    var menu1=MenuAlien()
-    menu1.opcionesMenu()
+
+    val menu=MenuUniversal()
+    menu.opcionesMenuFinal()
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

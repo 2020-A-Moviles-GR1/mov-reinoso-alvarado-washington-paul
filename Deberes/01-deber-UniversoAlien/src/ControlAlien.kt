@@ -102,7 +102,7 @@ class ControlAlien {
                 }
             } else {
                 cont = cont + 1
-                print(cont)
+                //print(cont)
             }
             lineaReEscrita = vector1.joinToString(separator = ",")+"\n"
             lineasNuevasUni.add(lineaReEscrita)
@@ -166,7 +166,7 @@ class ControlAlien {
                 }*/
             } else {
                 cont = cont + 1
-                print(cont)
+                //print(cont)
             }
             lineaReEscrita = vector1.joinToString(separator = ",")+"\n"
 
@@ -233,10 +233,10 @@ class ControlAlien {
                 }*/
             } else {
                 cont = cont + 1
-                print(cont)
+                //print(cont)
             }
             lineaReEscrita = vector1.joinToString(separator = ",")+"\n"
-            print(lineaReEscrita)
+            //print(lineaReEscrita)
             if(lineaReEscrita!=",,,,,"+"\n"){
                 lineasNuevasUni.add(lineaReEscrita)
             }

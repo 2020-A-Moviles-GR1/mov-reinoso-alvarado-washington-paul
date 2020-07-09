@@ -10,5 +10,4 @@ class Universo(
         return "${nombreUniverso},${antiguedadUniverso},${tamanioUniverso},${minTemperatura},${universoPrimario}\n"
     }
 
-
 }
