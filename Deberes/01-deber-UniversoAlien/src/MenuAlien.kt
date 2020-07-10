@@ -1,7 +1,7 @@
 class MenuAlien {
 
     fun imprimirEncavezado(){
-        println("MENU ALIENIGENA")
+        println("---- MENU ALIENIGENA ----")
         println("1. Crear nuevo Alien")
         println("2. Buscar un Alien")
         println("3. Modificar un Alien")

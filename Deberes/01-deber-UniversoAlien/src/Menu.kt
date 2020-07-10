@@ -2,9 +2,9 @@ class Menu {
 
 
     fun imprimirEncavezado(){
-        println("MENU UNIVERSAL")
-        println("1.Crear nuevo universo")
-        println("2.Buscar un universo")
+        println("----- MENU UNIVERSAL -----")
+        println("1. Crear nuevo universo")
+        println("2. Buscar un universo")
         println("3. Modificar un universo")
         println("4. Eliminar un universo")
         println("5. Mostrar universos")

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CicloVida1">
+
+    <TextView
+        android:id="@+id/tv_numero"
+        android:layout_width="103dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="140dp"
+        android:text="no tiene valores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_anadir"
+        android:layout_width="290dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="#8F2020"
+        android:text="ANADIR"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/tv_numero"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/tv_numero"
+        app:layout_constraintTop_toBottomOf="@+id/tv_numero" />
+</androidx.constraintlayout.widget.ConstraintLayout>
