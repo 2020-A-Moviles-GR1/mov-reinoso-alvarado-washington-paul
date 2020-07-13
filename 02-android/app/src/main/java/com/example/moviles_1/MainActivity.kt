@@ -19,7 +19,24 @@ class MainActivity : AppCompatActivity() {
                 irCicloVida()
         })
 
+
+        btn_list_view
+            .setOnClickListener({boton->
+                irListView()
+            })
+
+
     }
+
+    fun irListView(){
+        val intentException=Intent(
+            this,
+            BListViewActivity::class.java
+        )
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
+    }
+
 
     fun irCicloVida(){
         val intentException=Intent(
@@ -29,8 +46,6 @@ class MainActivity : AppCompatActivity() {
         //this.startActivity(intentException) metodo dentro de la clase
         startActivity(intentException)
     }
-
-
 
 
 
