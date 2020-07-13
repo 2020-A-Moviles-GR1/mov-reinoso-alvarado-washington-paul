@@ -14,6 +14,11 @@ class CicloVida1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ciclo_vida1)
         Log.i("Activity","OnCreate")
+        //obtendremos los valores de la memoria
+        numeroActual=ServicionBDDMemoria.numero
+        if(numeroActual!=0){
+            tv_numero.text=numeroActual.toString()
+        }
         btn_anadir
             .setOnClickListener{
                 sumarUnValor()
@@ -22,6 +27,7 @@ class CicloVida1 : AppCompatActivity() {
 
     fun sumarUnValor(){
         numeroActual=numeroActual+1
+        ServicionBDDMemoria.anadirNumero() //para que tambien se añada un numero en el servicio
         tv_numero.text=numeroActual.toString()
 
     }
