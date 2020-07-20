@@ -26,7 +26,28 @@ class MainActivity : AppCompatActivity() {
             })
 
 
+        btn_intent_respuesta
+            .setOnClickListener({boton->
+                //this.irCicloVida()
+                irIntentConRespuesta()
+            })
+
+
     }
+
+
+    fun irIntentConRespuesta(){
+        val intentException=Intent(
+            this,
+            IntentEnviaParametrosActivity::class.java
+        )
+        //agregando parametro (primitivo entero)
+        intentException.putExtra("numero",2)
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
+    }
+
+
 
     fun irListView(){
         val intentException=Intent(
@@ -46,6 +67,8 @@ class MainActivity : AppCompatActivity() {
         //this.startActivity(intentException) metodo dentro de la clase
         startActivity(intentException)
     }
+
+
 
 
 
