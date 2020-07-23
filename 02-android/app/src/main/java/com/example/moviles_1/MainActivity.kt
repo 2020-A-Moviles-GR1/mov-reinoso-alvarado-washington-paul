@@ -1,8 +1,10 @@
 package com.example.moviles_1
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -32,8 +34,83 @@ class MainActivity : AppCompatActivity() {
                 irIntentConRespuesta()
             })
 
+        btn_intent_implicito
+            .setOnClickListener({boton->
+                enviarIntentConRespuesta()
+            })
+
+        btn_resp_propia
+            .setOnClickListener({boton->
+                enviarIntentConRespuestPropia()
+            })
+    }
+
+    fun enviarIntentConRespuestPropia(){
+        val intentException=Intent(
+            this,
+            IntentEnviaParametrosActivity::class.java
+        )
+        startActivityForResult(intentException,305)
+    }
+
+    fun enviarIntentConRespuesta(){
+        val intentConRespuesta=Intent(
+            Intent.ACTION_PICK,
+            ContactsContract.CommonDataKinds.Phone.CONTENT_URI
+        )
+        //this.startActivityForResult(intent,codigDeRespuesta)
+        //304 lo pusimos nosotros no es ningun numero especial
+        startActivityForResult(intentConRespuesta,304)
 
     }
+
+    //override paraobtener los datos que queremos
+
+    override fun onActivityResult(
+        requestCode: Int, //numero que nosotros envimos 304
+        resultCode: Int, //valor diferente devuelto cuando selecionamos o no, algun elemento
+        data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (resultCode){
+            RESULT_OK->{
+                Log.i("resultado","OK")
+                when (requestCode){
+                    304->{//contactos
+                        val uri = data?.data
+                        if (uri != null) {
+                            val cursor = contentResolver.query(
+                                uri,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            )
+                            cursor?.moveToFirst()
+                            val indiceTelefono = cursor?.getColumnIndex(
+                                ContactsContract.CommonDataKinds.Phone.NUMBER
+                            )
+                            val telefono = cursor?.getString(indiceTelefono!!)//EL(!!)especifica que si recibiremos algo
+                            cursor?.close()
+                            Log.i("resultado", "Telefono: ${telefono}")
+                        }
+                    }
+                    305->{
+                       if(data!=null){
+                           val nombre=data.getStringExtra("nombre")
+                           val edad=data.getIntExtra("edad",0)
+                           Log.i("resultado", "nombre: ${nombre} edad: ${edad}")
+
+                       }
+                    }
+                }
+            }
+            RESULT_CANCELED->{
+                Log.i("resultado","=(")
+            }
+        }
+    }
+
 
 
     fun irIntentConRespuesta(){
