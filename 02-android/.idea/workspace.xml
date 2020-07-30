@@ -12,7 +12,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9463a57-73cf-4310-8fb2-759272eec6f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/androidTest/java/com/example/examen_1b_univ_alien/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/java/com/example/examen_1b_univ_alien/Alien.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/java/com/example/examen_1b_univ_alien/ListViewAlienActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/java/com/example/examen_1b_univ_alien/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/java/com/example/examen_1b_univ_alien/ServicBDDMemoria.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/java/com/example/examen_1b_univ_alien/Universo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/layout/activity_list_view_alien.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/app/src/test/java/com/example/examen_1b_univ_alien/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto/01-base modelo reacional/Veterinaria.cdm" beforeDir="false" afterPath="$PROJECT_DIR$/../Proyecto/01-base modelo reacional/Veterinaria.cdm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,10 +256,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="169" y="91" width="1037" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1593694927380" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1595506564280">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1596116695417">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1595506564280" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1596116695417" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593573300794">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
