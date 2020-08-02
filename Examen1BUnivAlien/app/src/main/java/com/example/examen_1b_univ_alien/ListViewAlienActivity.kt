@@ -1,46 +1,193 @@
 package com.example.examen_1b_univ_alien
 
+import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat.startActivity
+import kotlinx.android.synthetic.main.activity_formulario_crear_alien.*
 import kotlinx.android.synthetic.main.activity_list_view_alien.*
 
 class ListViewAlienActivity : AppCompatActivity() {
+    //var valorRaza=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_view_alien)
 
-        val ListaAlienigenas=ServicBDDMemoria.ListaAliensLlena()
-        val adaptador=ArrayAdapter(
+        if(ServicBDDMemoria.listaAlien.isEmpty()){
+            ServicBDDMemoria.ListaAliensLlena()
+        }
+
+        val ListaAlienigenas=ServicBDDMemoria.listaAlien
+        var adaptador=ArrayAdapter(
             this,//contexto
             android.R.layout.simple_list_item_1,//nombre layout
             ListaAlienigenas//lista
         )
 
+        btn_crear_alien
+            .setOnClickListener { boton->
+                irFormularioAliens()
+            }
+
+        btn_buscra_alien
+            .setOnClickListener { boton->
+                val listaUnicoAlien = arrayListOf<Alien>()
+                val raza=edt_text_alien.getText().toString()
+                val aln=ServicBDDMemoria.BuscarUnAlienRaza(raza)
+                listaUnicoAlien.add(aln)
+                adaptador=ArrayAdapter(
+                    this,//contexto
+                    android.R.layout.simple_list_item_1,//nombre layout
+                    listaUnicoAlien//lista
+                )
+                adaptador.notifyDataSetChanged()
+                lv_aliens.adapter=adaptador
+            }
+
+        var pos = 0
         lv_aliens.adapter=adaptador
         lv_aliens
             .onItemClickListener= AdapterView.OnItemClickListener{
                 parent, view, position, id ->
-            Log.i("List-view","position $position")
-            Log.i("List-view","parent $parent")
-            Log.i("List-view","id $id")
-            Log.i("List-view","view $view")
+            pos=position
+            Log.i("List","position $pos")
         }
 
-        /*btn_aniadir_entrendor
-            .setOnClickListener{
-                anadirEntrenador(adaptador,listaEntrenadores)
+        btn_editar_alien
+            .setOnClickListener({boton->
+                Log.i("List","position $pos")
+                busquedaEnviarParametrosA(pos)
+                //irFormularioEditarAliens()
+            })
 
-            }*/
+
+        btn_eliminar_alien
+            .setOnClickListener({boton->
+                Log.i("List","position $pos")
+                val confir=showDialogAlertSimple(pos)
+            })
+
+        btn_refrescar
+            .setOnClickListener({boton->
+                this.startActivity(intent)
+            })
+
+        val razaA=intent.extras?.getString("razaA","")
+        val alturaA=intent.extras?.getFloat("alturaA")
+        val pesoA=intent.extras?.getDouble("pesoA")
+        val edadA=intent.extras?.getInt("edadA")
+        val ostilidadA=intent.extras?.getBoolean("ostilidadA")
+        val universoA=intent.extras?.getString("universoA")
+
+        //validacion  hacer
+        if(razaA==null || razaA==""){
+            Log.i("List-view","paraCrarAlien $razaA")
+        }else{
+            ServicBDDMemoria.añadirCrearAlienigena(razaA!!,alturaA!!,pesoA!!,edadA!!,ostilidadA!!,universoA!!)
+            adaptador.notifyDataSetChanged()
+            Log.i("intents","valores:$razaA,$alturaA,$pesoA,$edadA,$ostilidadA,$universoA")
+        }
+
+        val razaAEditado=intent.extras?.getString("razaAEdit","")
+        val alturaAEditado=intent.extras?.getFloat("alturaAEdit")
+        val pesoAEditado=intent.extras?.getDouble("pesoAEdit")
+        val edadAEditado=intent.extras?.getInt("edadAEdit")
+        val ostilidadAEditado=intent.extras?.getBoolean("ostilidadAEdit")
+        val universoAEditado=intent.extras?.getString("universoAEdit")
+
+        if (razaAEditado==""||razaAEditado==null){
+            //funcion para editar la list
+            Log.i("List-view","paraCrarAlien $razaAEditado")
+        }else{
+            val alienEditado = Alien(razaAEditado!!,alturaAEditado!!,pesoAEditado!!,edadAEditado!!,ostilidadAEditado!!,universoAEditado!!)
+            ServicBDDMemoria.EditarAlien(pos,alienEditado)
+            Log.i("List","editadad $ListaAlienigenas")
+            adaptador.notifyDataSetChanged()
+
+        }
+
     }
-    //si quisiera mantener los datos usaria un constrain de servicioBDDMemoria
-    /*fun anadirEntrenador(adaptador: ArrayAdapter<Entrenador>, listEntrenadores:ArrayList<Entrenador>){
-        listEntrenadores.add(
-            Entrenador("Nuevo","Entrenador")
+
+    fun busquedaEnviarParametrosA(pos:Int){
+        val alienBI=ServicBDDMemoria.BuscarUnAlienIndice(pos)
+
+        val intentException= Intent(
+            this,
+            FormularioEdicionAlien::class.java
         )
-        adaptador.notifyDataSetChanged()
-    }*/
+        val valorRaza = alienBI.razaAlien
+        val valorAltura = alienBI.alturaAlien
+        val valorPeso = alienBI.pesoAlien
+        val valorEdad = alienBI.edadAlien
+        val valorOstilidad = alienBI.ostilidadAlien
+        val valorUniverso = alienBI.nombreUnivers
+
+        intentException.putExtra("razaAl",valorRaza)
+        intentException.putExtra("alturaAl",valorAltura)
+        intentException.putExtra("pesoAl",valorPeso)
+        intentException.putExtra("edadAl",valorEdad)
+        intentException.putExtra("ostilidadAl",valorOstilidad)
+        intentException.putExtra("universoAl",valorUniverso)
+
+        startActivity(intentException)
+
+        Log.i("List-view","position $valorRaza,$valorEdad,$valorOstilidad,$valorAltura,$valorUniverso,$valorPeso")
+    }
+
+
+
+    fun irFormularioAliens(){
+        val intentException= Intent(
+            this,
+            FormularioCrearAlien::class.java
+        )
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
+    }
+
+    fun irFormularioEditarAliens(){
+        val intentException= Intent(
+            this,
+            FormularioEdicionAlien::class.java
+        )
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
+    }
+
+    fun showDialogAlertSimple(pos:Int) :Boolean{
+        var vandera=false
+        AlertDialog.Builder(this)
+            .setTitle("Confirmar eliminación")
+            .setMessage("Seguro desea eliminar este Alienigena?")
+            .setPositiveButton(android.R.string.ok,
+                DialogInterface.OnClickListener { dialog, which ->
+                    //botón OK pulsado
+                    Log.i("List","position $pos")
+                    val indiceBorra=pos
+                    //confirmacion deeliminacion
+                    Log.i("List","position $indiceBorra")
+
+                        //Log.i("List","position $ListaAlienigenas")
+                        ServicBDDMemoria.eliminarAlien(indiceBorra)
+                        //adaptador.notifyDataSetChanged()
+                        //Log.i("List","position $ListaAlienigenas")
+
+                    vandera=true
+                    Log.i("List","position $vandera")
+                })
+            .setNegativeButton(android.R.string.cancel,
+                DialogInterface.OnClickListener { dialog, which ->
+                    //botón cancel pulsado
+                    vandera=false
+                    Log.i("List","position $vandera")
+                })
+            .show()
+        return vandera
+    }
 
 }

@@ -12,7 +12,7 @@ class Alien(
 
     //funciones de la clase aqui
     override fun toString ():String{
-        return "${razaAlien},${alturaAlien},${pesoAlien},${edadAlien},${ostilidadAlien},${nombreUnivers}\n"
+        return "${razaAlien}, ${alturaAlien}, ${pesoAlien}, ${edadAlien}, ${ostilidadAlien}, ${nombreUnivers}"
     }
 
 }
