@@ -114,9 +114,10 @@ class ListViewAlienActivity : AppCompatActivity() {
             //funcion para editar la list
             Log.i("List","unversoresivido $nombreUniversoBorrado")
         }else{
+            Log.i("List","unversoresivido $ListaAlienigenas")
             Log.i("List","unversoresivido $nombreUniversoBorrado")
             //borraralien por nombre universo
-            ServicBDDMemoria.eliminarAlienNumbreUnivrs(nombreUniversoBorrado)
+            ServicBDDMemoria.eliminarAlienNumbreUnivrs(nombreUniversoBorrado,ListaAlienigenas)
             adaptador.notifyDataSetChanged()
         }
 

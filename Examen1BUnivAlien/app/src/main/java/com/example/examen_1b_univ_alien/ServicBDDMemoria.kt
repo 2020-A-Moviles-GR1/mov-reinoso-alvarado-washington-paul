@@ -66,13 +66,14 @@ class ServicBDDMemoria {
             this.listaAlien.removeAt(pos)
         }
 
-        fun eliminarAlienNumbreUnivrs(nombreUniB: String) {
+        fun eliminarAlienNumbreUnivrs(nombreUniB: String,alienL:ArrayList<Alien>) {
+            var alienR = Alien("", 0.0F, 0.0, 0, false, "")
             //for(i in this.listaAlien.indices){
             //    if(this.listaAlien[i].nombreUnivers==nombreUniB){
             //        this.listaAlien.removeAt(i)
             //    }
             //}
-            for (alienR in this.listaAlien) {
+            for (alienR in alienL) {
                 if (alienR.nombreUnivers == nombreUniB) {
                     this.listaAlien.remove(alienR)
                 }
