@@ -8,8 +8,6 @@ import android.util.Log
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat.startActivity
-import kotlinx.android.synthetic.main.activity_formulario_crear_alien.*
 import kotlinx.android.synthetic.main.activity_list_view_alien.*
 
 class ListViewAlienActivity : AppCompatActivity() {
@@ -72,7 +70,7 @@ class ListViewAlienActivity : AppCompatActivity() {
                 val confir=showDialogAlertSimple(pos)
             })
 
-        btn_refrescar
+        btn_refrescarU
             .setOnClickListener({boton->
                 this.startActivity(intent)
             })
@@ -159,7 +157,7 @@ class ListViewAlienActivity : AppCompatActivity() {
         startActivity(intentException)
     }
 
-    fun showDialogAlertSimple(pos:Int) :Boolean{
+    fun showDialogAlertSimple(pos:Int) {
         var vandera=false
         AlertDialog.Builder(this)
             .setTitle("Confirmar eliminación")
@@ -167,18 +165,10 @@ class ListViewAlienActivity : AppCompatActivity() {
             .setPositiveButton(android.R.string.ok,
                 DialogInterface.OnClickListener { dialog, which ->
                     //botón OK pulsado
-                    Log.i("List","position $pos")
                     val indiceBorra=pos
-                    //confirmacion deeliminacion
-                    Log.i("List","position $indiceBorra")
-
-                        //Log.i("List","position $ListaAlienigenas")
                         ServicBDDMemoria.eliminarAlien(indiceBorra)
-                        //adaptador.notifyDataSetChanged()
-                        //Log.i("List","position $ListaAlienigenas")
-
                     vandera=true
-                    Log.i("List","position $vandera")
+                    this.startActivity(intent)
                 })
             .setNegativeButton(android.R.string.cancel,
                 DialogInterface.OnClickListener { dialog, which ->
@@ -187,7 +177,6 @@ class ListViewAlienActivity : AppCompatActivity() {
                     Log.i("List","position $vandera")
                 })
             .show()
-        return vandera
     }
 
 }

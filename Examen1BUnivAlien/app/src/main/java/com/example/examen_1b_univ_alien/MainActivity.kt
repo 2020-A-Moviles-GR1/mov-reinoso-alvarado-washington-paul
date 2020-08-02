@@ -17,6 +17,11 @@ class MainActivity : AppCompatActivity() {
             irListViewAliens()
         })
 
+     btn_menu_universo
+         .setOnClickListener({boton->
+             irListViewUniverso()
+         })
+
     }
 
     fun irListViewAliens(){
@@ -27,6 +32,18 @@ class MainActivity : AppCompatActivity() {
         //this.startActivity(intentException) metodo dentro de la clase
         startActivity(intentException)
     }
+    fun irListViewUniverso(){
+        val intentException= Intent(
+            this,
+            ListViewUniversoActivity::class.java
+        )
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
+    }
+
+
+
+
 
 
 }

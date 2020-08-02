@@ -29,8 +29,6 @@ class FormularioEdicionAlien : AppCompatActivity() {
             .setOnClickListener({boton->
                 almacenarDatosEsdicion()
             })
-
-
     }
 
     fun almacenarDatosEsdicion(){
@@ -46,7 +44,6 @@ class FormularioEdicionAlien : AppCompatActivity() {
             this,
             ListViewAlienActivity::class.java
         )
-
         intentException.putExtra("razaAEdit",razaEditada)
         intentException.putExtra("alturaAEdit",alturaEditada)
         intentException.putExtra("pesoAEdit",pesoEditada)

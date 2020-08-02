@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FormularioEdicionAlien"></activity>
+        <activity android:name=".FormularioEdicionUniverso"></activity>
+        <activity android:name=".FormularioCrearUniverso" />
+        <activity android:name=".ListViewUniversoActivity" />
+        <activity android:name=".FormularioEdicionAlien" />
         <activity android:name=".FormularioCrearAlien" />
         <activity android:name=".ListViewAlienActivity" />
         <activity android:name=".MainActivity">
