@@ -1,0 +1,7 @@
+#Sun Aug 02 14:19:28 COT 2020
+base.0=C\:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
