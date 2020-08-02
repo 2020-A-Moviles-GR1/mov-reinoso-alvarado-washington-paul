@@ -74,7 +74,7 @@ class ListViewUniversoActivity : AppCompatActivity() {
 
         btn_refrescarU
             .setOnClickListener({boton->
-                this.startActivity(intent)
+                irMenuPrincipal()
             })
 
         btn_editar_universo
@@ -142,41 +142,44 @@ class ListViewUniversoActivity : AppCompatActivity() {
         intentException.putExtra("temperaturaUn",valorTemperatura)
         intentException.putExtra("primarioUn",valorPrimario)
 
-
         startActivity(intentException)
 
         //Log.i("List-view","position $valorRaza,$valorEdad,$valorOstilidad,$valorAltura,$valorUniverso,$valorPeso")
     }
 
     fun showDialogAlertSimple(pos:Int){
-        var vandera=false
+        var nombreUnivBorrado=""
         AlertDialog.Builder(this)
             .setTitle("Confirmar eliminación")
             .setMessage("Seguro desea eliminar este Universo?")
             .setPositiveButton(android.R.string.ok,
                 DialogInterface.OnClickListener { dialog, which ->
                     //botón OK pulsado
-                    Log.i("List","position $pos")
                     val indiceBorra=pos
-                    //confirmacion deeliminacion
-                    Log.i("List","position $indiceBorra")
-                    //Log.i("List","position $ListaAlienigenas")
-                    ServicBDDMemoria.eliminarUniverso(indiceBorra)
-                    //adaptador.notifyDataSetChanged()
-                    //Log.i("List","position $ListaAlienigenas")
-                    vandera=true
-                    Log.i("List","position $vandera")
-                    this.startActivity(intent)
+                    nombreUnivBorrado=ServicBDDMemoria.eliminarUniverso(indiceBorra)
+                    Log.i("List","position $nombreUnivBorrado")
+                    val intentException= Intent(
+                        this,
+                        ListViewAlienActivity::class.java
+                    )
+                    intentException.putExtra("nombreUniversoBorrado",nombreUnivBorrado)
+                    startActivity(intentException)
+                    //this.startActivity(intent)
                 })
             .setNegativeButton(android.R.string.cancel,
                 DialogInterface.OnClickListener { dialog, which ->
                     //botón cancel pulsado
-                    vandera=false
-                    Log.i("List","position $vandera")
                 })
             .show()
     }
 
-
+    fun irMenuPrincipal(){
+        val intentException= Intent(
+            this,
+            MainActivity::class.java
+        )
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
+    }
 
 }

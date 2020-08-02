@@ -29,6 +29,11 @@ class FormularioEdicionAlien : AppCompatActivity() {
             .setOnClickListener({boton->
                 almacenarDatosEsdicion()
             })
+
+        btn_cancelar_editar_AlienE
+            .setOnClickListener({boton->
+                irListViewAliens()
+            })
     }
 
     fun almacenarDatosEsdicion(){
@@ -61,6 +66,15 @@ class FormularioEdicionAlien : AppCompatActivity() {
         edit_editar_edad.setText(null)
         edit_editar_ostil.setText(null)
         edit_editar_univers.setText(null)
+    }
+
+
+    fun irListViewAliens(){
+        val intentException= Intent(
+            this,
+            ListViewAlienActivity::class.java
+        )
+        startActivity(intentException)
     }
 
 }

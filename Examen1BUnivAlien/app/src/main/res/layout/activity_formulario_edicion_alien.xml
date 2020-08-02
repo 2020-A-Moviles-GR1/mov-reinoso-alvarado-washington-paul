@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FFFFFF"
     tools:context=".FormularioEdicionAlien">
 
     <TextView
@@ -37,7 +38,9 @@
         android:layout_width="160dp"
         android:layout_height="44dp"
         android:layout_marginTop="3dp"
+        android:backgroundTint="#0E4095"
         android:text="CANCELAR"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/edit_editar_univers"
         app:layout_constraintTop_toBottomOf="@+id/edit_editar_univers" />
 
@@ -136,7 +139,9 @@
         android:layout_width="182dp"
         android:layout_height="46dp"
         android:layout_marginTop="3dp"
+        android:backgroundTint="#0E4095"
         android:text="EDITAR"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/btn_cancelar_editar_AlienE"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/edit_editar_univers"

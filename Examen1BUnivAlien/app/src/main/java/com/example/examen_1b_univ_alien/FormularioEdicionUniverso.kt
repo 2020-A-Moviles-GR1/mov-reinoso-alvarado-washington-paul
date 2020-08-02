@@ -28,6 +28,10 @@ class FormularioEdicionUniverso : AppCompatActivity() {
                 almacenarDatosEsdicion()
             })
 
+        btn_cancelar_editar_UniversoE
+            .setOnClickListener({boton->
+                irListViewUniverso()
+            })
     }
 
     fun almacenarDatosEsdicion(){
@@ -61,5 +65,14 @@ class FormularioEdicionUniverso : AppCompatActivity() {
         edit_editar_antiguedad.setText(null)
         edit_editar_primario.setText(null)
     }
+
+    fun irListViewUniverso(){
+        val intentException= Intent(
+            this,
+            ListViewUniversoActivity::class.java
+        )
+        startActivity(intentException)
+    }
+
 
 }

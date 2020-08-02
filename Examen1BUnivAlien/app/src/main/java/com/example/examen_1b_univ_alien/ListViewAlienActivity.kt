@@ -72,7 +72,7 @@ class ListViewAlienActivity : AppCompatActivity() {
 
         btn_refrescarU
             .setOnClickListener({boton->
-                this.startActivity(intent)
+                irMenuPrincipal()
             })
 
         val razaA=intent.extras?.getString("razaA","")
@@ -108,6 +108,21 @@ class ListViewAlienActivity : AppCompatActivity() {
             adaptador.notifyDataSetChanged()
 
         }
+        val nombreUniversoBorrado=intent.extras?.getString("nombreUniversoBorrado","")
+
+        if (nombreUniversoBorrado==""||nombreUniversoBorrado==null){
+            //funcion para editar la list
+            Log.i("List","unversoresivido $nombreUniversoBorrado")
+        }else{
+            Log.i("List","unversoresivido $nombreUniversoBorrado")
+            //borraralien por nombre universo
+            ServicBDDMemoria.eliminarAlienNumbreUnivrs(nombreUniversoBorrado)
+            adaptador.notifyDataSetChanged()
+        }
+
+
+
+
 
     }
 
@@ -178,5 +193,16 @@ class ListViewAlienActivity : AppCompatActivity() {
                 })
             .show()
     }
+
+    fun irMenuPrincipal(){
+        val intentException= Intent(
+            this,
+            MainActivity::class.java
+        )
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
+    }
+
+
 
 }
