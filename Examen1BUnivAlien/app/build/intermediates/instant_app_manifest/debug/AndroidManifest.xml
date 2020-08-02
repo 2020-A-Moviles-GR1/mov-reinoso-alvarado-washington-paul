@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.examen_1b_univ_alien.FormularioEdicionUniverso" />
+        <activity android:name="com.example.examen_1b_univ_alien.FormularioCrearUniverso" />
+        <activity android:name="com.example.examen_1b_univ_alien.ListViewUniversoActivity" />
         <activity android:name="com.example.examen_1b_univ_alien.FormularioEdicionAlien" />
         <activity android:name="com.example.examen_1b_univ_alien.FormularioCrearAlien" />
         <activity android:name="com.example.examen_1b_univ_alien.ListViewAlienActivity" />

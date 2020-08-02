@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormularioCrearAlien">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="114dp"
+        android:layout_height="39dp"
+        android:text="Crea Alien"
+        android:textColor="#070707"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <EditText
+        android:id="@+id/edt_raza"
+        android:layout_width="351dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ingresar Raza"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_altura"
+        android:layout_width="353dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ingresar Altura"
+        app:layout_constraintEnd_toEndOf="@+id/edt_raza"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_raza"
+        app:layout_constraintTop_toBottomOf="@+id/edt_raza" />
+
+    <EditText
+        android:id="@+id/edt_peso"
+        android:layout_width="355dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ingresar Peso"
+        app:layout_constraintEnd_toEndOf="@+id/edt_altura"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_altura"
+        app:layout_constraintTop_toBottomOf="@+id/edt_altura" />
+
+    <EditText
+        android:id="@+id/edt_edad"
+        android:layout_width="353dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ingresar Edad"
+        app:layout_constraintEnd_toEndOf="@+id/edt_peso"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_peso"
+        app:layout_constraintTop_toBottomOf="@+id/edt_peso" />
+
+    <EditText
+        android:id="@+id/edt_ostilidad"
+        android:layout_width="351dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ingresar Ostilidad"
+        app:layout_constraintEnd_toEndOf="@+id/edt_edad"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_edad"
+        app:layout_constraintTop_toBottomOf="@+id/edt_edad" />
+
+    <EditText
+        android:id="@+id/edt_universo"
+        android:layout_width="351dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ingresar Universo"
+        app:layout_constraintEnd_toEndOf="@+id/edt_ostilidad"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_ostilidad"
+        app:layout_constraintTop_toBottomOf="@+id/edt_ostilidad" />
+
+    <Button
+        android:id="@+id/btn_crear_Aln"
+        android:layout_width="155dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#0E4095"
+        android:text="CREAR"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cancelar_creacion"
+        app:layout_constraintHorizontal_bias="0.319"
+        app:layout_constraintStart_toStartOf="@+id/edt_universo"
+        app:layout_constraintTop_toBottomOf="@+id/edt_universo" />
+
+    <Button
+        android:id="@+id/btn_cancelar_creacion"
+        android:layout_width="149dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#0E4095"
+        android:text="CANCELAR"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/edt_universo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_universo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
