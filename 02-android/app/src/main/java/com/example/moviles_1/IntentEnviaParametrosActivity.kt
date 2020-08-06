@@ -25,6 +25,20 @@ class IntentEnviaParametrosActivity : AppCompatActivity() {
             Log.i("intents","el texto es: ${textoCompartido}")
         }
 
+        val kiara = intent.getParcelableExtra<Mascota>("Kiara")
+        if(kiara!=null){
+            Log.i("parcelable","Mascota:${kiara.nombre},Dueño:${kiara.duenio?.nombre}")
+        }
+        val aregloascota = intent.getParcelableArrayListExtra<Mascota>("arregloMascotas")
+
+        if(aregloascota!=null){
+            aregloascota.forEach{
+                if (it!=null){
+                    Log.i("parcelable","EN ARREGLO")
+                    Log.i("parcelable","${kiara.nombre},${kiara.duenio?.nombre}")
+                }
+            }
+        }
 
         //terminamos la actividad
         btn_devolver_respuesta
