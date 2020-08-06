@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -120,7 +121,20 @@ class MainActivity : AppCompatActivity() {
         )
         //agregando parametro (primitivo entero)
         intentException.putExtra("numero",2)
-        //this.startActivity(intentException) metodo dentro de la clase
+        val paul=Usuario(
+            "Paul",
+            15,
+            Date(),
+            1.0
+        )
+        val kiara = Mascota(
+            "Kiara",
+            paul
+        )
+        val aregloMascotas= arrayListOf<Mascota>(kiara)
+        intentException.putExtra("Kiara",kiara)
+        intentException.putExtra("arregloMascotas",aregloMascotas)
+
         startActivity(intentException)
     }
 
