@@ -13,6 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e9463a57-73cf-4310-8fb2-759272eec6f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-backend/mascotas/views/layouts/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../03-backend/mascotas/views/layouts/layout.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
