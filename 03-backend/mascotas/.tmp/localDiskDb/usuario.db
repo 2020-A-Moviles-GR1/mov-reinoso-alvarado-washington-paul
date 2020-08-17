@@ -1,6 +1,2 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
-{"Nombre":"Paul","Profesion":"Estudiante","createdAt":1597328045238,"updatedAt":1597328045238,"id":1,"_id":1}
-{"Nombre":"Francisco","Profesion":"Estudiante","createdAt":1597332026722,"updatedAt":1597332026722,"id":2,"_id":2}
-{"$$deleted":true,"_id":2}
-{"$$deleted":true,"_id":1}
 {"Nombre":"Paul Reinoso","Profesion":"Estudiante Universitario","createdAt":1597328045238,"updatedAt":1597332316707,"id":1,"_id":1}
