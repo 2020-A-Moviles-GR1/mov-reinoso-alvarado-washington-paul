@@ -32,6 +32,12 @@ module.exports = {
     password:{
       type:'String',
       regex:/^[a-zA-Z]\w{3,14}$/
+    },
+
+    Pokemons:{//one to many (plural)
+      collection: "pokemon", //referenci al modelo
+      via:"usuario" //Nombre fk en pokemon
     }
+
   },
 };

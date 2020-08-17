@@ -13,8 +13,11 @@ module.exports = {
     },
     usuario:{             //Many to One en Pokemon.
       model:"usuario",    //referencia a usuario
-      required:true
+      required:true       //opcional y depende de la logica de negocio
+    },
+    batalla:{
+      model:"batalla",
+      required:false       //opcional y depende de la logica de negocio      
     }
   },
 };
-
