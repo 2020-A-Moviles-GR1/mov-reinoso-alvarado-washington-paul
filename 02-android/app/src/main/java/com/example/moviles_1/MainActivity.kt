@@ -44,6 +44,21 @@ class MainActivity : AppCompatActivity() {
             .setOnClickListener({boton->
                 enviarIntentConRespuestPropia()
             })
+
+        btn_http
+            .setOnClickListener({boton->
+                abrirActividadHttp()
+            })
+
+    }
+
+    fun abrirActividadHttp(){
+        val intentException=Intent(
+            this,
+            HttpActivity::class.java
+        )
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
     }
 
     fun enviarIntentConRespuestPropia(){
@@ -158,7 +173,6 @@ class MainActivity : AppCompatActivity() {
         //this.startActivity(intentException) metodo dentro de la clase
         startActivity(intentException)
     }
-
 
 
 
