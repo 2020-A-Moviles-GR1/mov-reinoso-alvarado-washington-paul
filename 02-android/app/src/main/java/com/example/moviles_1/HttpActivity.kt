@@ -4,6 +4,7 @@ import android.media.Session2Command
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.beust.klaxon.Klaxon
 import com.github.kittinunf.fuel.httpGet
 import kotlinx.android.synthetic.main.activity_http.*
 import com.github.kittinunf.result.Result
@@ -20,6 +21,25 @@ class HttpActivity : AppCompatActivity() {
             })
     }
     fun obtenerUsuarios() {
+        val pokemonString ="""
+            {
+            "createdAt": 1597678853356,
+            "updatedAt": 1597678879582,
+            "id": 2,
+            "nombre": "pikachu",
+            "usuario": 1,
+            "batalla": 1
+          }
+          """.trimIndent()
+
+        val pokemonInstancia= Klaxon()
+            .parse<PokemonHttp>(pokemonString)
+
+        if(pokemonInstancia!=null){
+            Log.i("http-klaxon", "Nombre: ${pokemonInstancia.nombre}")
+            Log.i("http-klaxon", "FechaCreacion: ${pokemonInstancia.fechaCreacion}")
+        }
+
         val url = urlPrincipal + "/Usuario"
         url
             .httpGet()
@@ -28,7 +48,22 @@ class HttpActivity : AppCompatActivity() {
                     is Result.Success -> {
                         val data = result.get()
                         Log.i("http-klaxon", "Data: ${data}")
+
+                        val usuarios=Klaxon()
+                            .parseArray<UsuarioHttp>(data)
+                        if(usuarios!=null){
+                            usuarios.forEach{
+                                Log.i("http-klaxon", "Nombre: ${it.nombre}  estadoCivil ${it.estdoCivil}")
+
+                                if(it.Pokemons.size>0){
+                                it.Pokemons.forEach{
+                                    Log.i("http-klaxon", "Nombre: ${it.nombre}")
+                                   }
+                                }
+                            }
+                        }
                     }
+
                     is Result.Failure -> {
                         val ex = result.getException()
                         Log.i("http-klaxon", "Error: ${ex.message}")
