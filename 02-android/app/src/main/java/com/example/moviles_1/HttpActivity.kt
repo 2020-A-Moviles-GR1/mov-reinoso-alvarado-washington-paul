@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import com.beust.klaxon.Klaxon
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
 import kotlinx.android.synthetic.main.activity_http.*
 import com.github.kittinunf.result.Result
 
@@ -15,11 +16,48 @@ class HttpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_http)
+
         btn_obtener
             .setOnClickListener({
                 obtenerUsuarios()
             })
+
+        btn_crear
+            .setOnClickListener({
+                crearUsuario()
+            })
+
     }
+
+
+    fun crearUsuario(){
+        val url=urlPrincipal + "/Usuario"
+
+        val parametroUusuario : List<Pair<String,String>> = listOf( //lista de clave valores
+            "cedula" to "1777279766",
+            "nombre" to "Fran",
+            "correo" to "fran.ruiz@epn.edu.ec",
+            "estdoCivil" to "Casado",
+            "password" to "A123456789b"
+        )
+        url
+            .httpPost(parametroUusuario)
+            .responseString{request, response, result ->
+                when (result){
+                    is Result.Failure->{
+                        val error = result.getException()
+                        Log.i("http-klaxon", "Nombre: ${error}")
+                    }
+                    is Result.Success->{
+                        val usuarioString=result.get()
+                        Log.i("http-klaxon", "Nombre: ${usuarioString}")
+                    }
+                }
+            }
+
+    }
+
+
     fun obtenerUsuarios() {
         val pokemonString ="""
             {

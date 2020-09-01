@@ -72,4 +72,15 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_resp_propia"
         app:layout_constraintStart_toStartOf="@+id/btn_resp_propia"
         app:layout_constraintTop_toBottomOf="@+id/btn_resp_propia" />
+
+    <Button
+        android:id="@+id/btn_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="RECYCLER"
+        app:layout_constraintEnd_toEndOf="@+id/btn_http"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_http"
+        app:layout_constraintTop_toBottomOf="@+id/btn_http" />
 </androidx.constraintlayout.widget.ConstraintLayout>
