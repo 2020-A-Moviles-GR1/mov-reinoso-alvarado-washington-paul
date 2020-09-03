@@ -8,7 +8,6 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class UsuarioHttp (
-
     var createdAt:Long,
     var updatedAt:Long,
     var id:Int,
