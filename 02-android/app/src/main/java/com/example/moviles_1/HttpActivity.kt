@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_http.*
 import com.github.kittinunf.result.Result
 
 class HttpActivity : AppCompatActivity() {
-    val urlPrincipal = "http://192.168.0.104:1337"
+    val urlPrincipal = "http://192.168.0.106:1337"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +20,7 @@ class HttpActivity : AppCompatActivity() {
         btn_obtener
             .setOnClickListener({
                 obtenerUsuarios()
+                obtenerPokemons()
             })
 
         btn_crear
@@ -85,17 +86,18 @@ class HttpActivity : AppCompatActivity() {
                 when (result) {
                     is Result.Success -> {
                         val data = result.get()
-                        Log.i("http-klaxon", "Data: ${data}")
+                       // Log.i("http-klaxon", "Data: ${data}")
 
                         val usuarios=Klaxon()
                             .parseArray<UsuarioHttp>(data)
+
                         if(usuarios!=null){
                             usuarios.forEach{
                                 Log.i("http-klaxon", "Nombre: ${it.nombre}  estadoCivil ${it.estdoCivil}")
 
-                                if(it.Pokemons.size>0){
-                                it.Pokemons.forEach{
-                                    Log.i("http-klaxon", "Nombre: ${it.nombre}")
+                                if(it.Pokemons?.size!!>0){
+                                it.Pokemons?.forEach{
+                                    Log.i("http-klaxon", "usuario: ${it.usuario} Nombre: ${it.nombre}")
                                    }
                                 }
                             }
@@ -110,4 +112,36 @@ class HttpActivity : AppCompatActivity() {
             }
     }
 
-}
+
+
+    private fun obtenerPokemons() {
+
+        val url = urlPrincipal + "/pokemon"
+
+        url
+            .httpGet()
+            .responseString{
+                    request, response, result ->
+                when(result){
+                    is Result.Success -> {
+                        val data = result.get()
+                        //Log.i("http-klaxon", "Data: ${data}")
+
+                        val pokemons = Klaxon()
+                            .converter(PokemonHttp.myConverter)
+                            .parseArray<PokemonHttp>(data)
+
+                        if(pokemons != null){
+                            pokemons.forEach{
+                                Log.i("http-klaxon", "Nombre= ${it.nombre}  Usuario= ${it.usuario}")
+                            }
+                        }
+                    }
+                    is Result.Failure -> {
+                        val ex = result.getException()
+                        Log.i("http-klaxon", "Error: ${ex.message}")
+                    }
+                }
+            }
+        }
+    }
