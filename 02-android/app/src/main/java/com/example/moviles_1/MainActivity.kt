@@ -50,7 +50,22 @@ class MainActivity : AppCompatActivity() {
                 abrirActividadHttp()
             })
 
+        btn_recycler
+            .setOnClickListener({boton->
+                abrirRecyclerView()
+            })
+
     }
+
+    fun abrirRecyclerView(){
+        val intentException=Intent(
+            this,
+            RecyclerVIewActivity::class.java
+        )
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
+    }
+
 
     fun abrirActividadHttp(){
         val intentException=Intent(
