@@ -760,8 +760,10 @@ id btn_editar_alien
 id btn_editar_universo
 id btn_eliminar_alien
 id btn_eliminar_universo
+id btn_http
 id btn_menu_aliens
 id btn_menu_universo
+id btn_obHttp
 id btn_refrescarU
 id buttonPanel
 id center_vertical
@@ -964,6 +966,7 @@ layout activity_formulario_crear_alien
 layout activity_formulario_crear_universo
 layout activity_formulario_edicion_alien
 layout activity_formulario_edicion_universo
+layout activity_http
 layout activity_list_view_alien
 layout activity_list_view_universo
 layout activity_main

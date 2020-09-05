@@ -8,6 +8,7 @@ class Alien(
     var ostilidadAlien:Boolean,
     var nombreUnivers:String
 
+
 ){
 
     //funciones de la clase aqui
