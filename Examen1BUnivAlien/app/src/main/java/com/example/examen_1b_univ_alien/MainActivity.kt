@@ -16,13 +16,26 @@ class MainActivity : AppCompatActivity() {
         .setOnClickListener({ boton->
             irListViewAliens()
         })
-
-     btn_menu_universo
+    btn_menu_universo
          .setOnClickListener({boton->
              irListViewUniverso()
-         })
+    })
+
+    btn_http
+        .setOnClickListener({boton->
+           irHttp()
+        })
 
     }
+
+    fun irHttp(){
+        val intentException= Intent(
+            this,
+            HttpActivity::class.java
+        )
+        startActivity(intentException)
+    }
+
 
     fun irListViewAliens(){
         val intentException= Intent(
