@@ -55,6 +55,18 @@ class MainActivity : AppCompatActivity() {
                 abrirRecyclerView()
             })
 
+        btn_mapa
+            .setOnClickListener{
+                abrirMapa()
+            }
+    }
+    fun abrirMapa(){
+        val intentException=Intent(
+            this,
+            MapsActivity::class.java
+        )
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
     }
 
     fun abrirRecyclerView(){

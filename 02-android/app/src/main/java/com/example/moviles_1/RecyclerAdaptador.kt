@@ -18,12 +18,25 @@ class RecyclerAdaptador(
         androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
         val nombreTextView:TextView
         val cedulaTextView:TextView
+        val likesTextView: TextView
         val accionButton:Button
+        var numeroLikes=0
         init {
             nombreTextView=view.findViewById(R.id.tv_nombre)
             cedulaTextView=view.findViewById(R.id.tv_cedula)
             accionButton= view.findViewById(R.id.btn_accion)
+            likesTextView = view.findViewById(R.id.tv_likes)
+            accionButton.setOnClickListener{
+                anadirLike()
+            }
         }
+
+        fun anadirLike(){
+            this.numeroLikes=this.numeroLikes+1
+            likesTextView.text=this.numeroLikes.toString()
+            contexto.anadirLikesEnActividad(1)
+        }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -57,5 +70,7 @@ class RecyclerAdaptador(
         holder.nombreTextView.text=usuario.nombre
         holder.cedulaTextView.text=usuario.cedula
         holder.accionButton.text="Like${usuario.nombre}"
+
+        holder.likesTextView.text="0"
     }
 }
