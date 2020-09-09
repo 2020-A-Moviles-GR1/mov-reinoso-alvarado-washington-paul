@@ -24,6 +24,8 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.examen_1b_univ_alien.ListViewHttpAlienActivity" />
+        <activity android:name="com.example.examen_1b_univ_alien.ListViewHttpUniversActivity" />
         <activity android:name="com.example.examen_1b_univ_alien.HttpActivity" />
         <activity android:name="com.example.examen_1b_univ_alien.FormularioEdicionUniverso" />
         <activity android:name="com.example.examen_1b_univ_alien.FormularioCrearUniverso" />

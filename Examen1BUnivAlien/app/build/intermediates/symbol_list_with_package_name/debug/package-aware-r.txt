@@ -744,12 +744,18 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn_actualiUniHttp
+id btn_actualizarAlienHttp
+id btn_buscarAlienHttp
+id btn_buscarUniHttp
 id btn_buscar_universo
 id btn_buscra_alien
 id btn_cancelar_Unv
 id btn_cancelar_creacion
 id btn_cancelar_editar_AlienE
 id btn_cancelar_editar_UniversoE
+id btn_creaAlienHttp
+id btn_creaUniHttp
 id btn_crear_Aln
 id btn_crear_Unv
 id btn_crear_alien
@@ -758,6 +764,8 @@ id btn_editar_AlienE
 id btn_editar_UniversoE
 id btn_editar_alien
 id btn_editar_universo
+id btn_eliminUniHttp
+id btn_eliminarAlienHttp
 id btn_eliminar_alien
 id btn_eliminar_universo
 id btn_http
@@ -782,6 +790,8 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id editTextTextPersonName
+id editTextTextPersonName2
 id edit_editar_altura
 id edit_editar_antiguedad
 id edit_editar_edad
@@ -829,7 +839,9 @@ id line3
 id listMode
 id list_item
 id lv_aliens
+id lv_aliensHttp
 id lv_universo
+id lv_universoHttp
 id message
 id middle
 id multiply
@@ -968,6 +980,8 @@ layout activity_formulario_edicion_alien
 layout activity_formulario_edicion_universo
 layout activity_http
 layout activity_list_view_alien
+layout activity_list_view_http_alien
+layout activity_list_view_http_univers
 layout activity_list_view_universo
 layout activity_main
 layout custom_dialog

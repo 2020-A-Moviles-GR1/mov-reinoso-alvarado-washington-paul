@@ -21,11 +21,11 @@ module.exports = {
       required:true
     },
     tamanioUniverso:{
-      type:'Float',
+      type:'number',
       required:true 
     },
     minTemperatura:{
-      type:'Float',      
+      type:'number',      
       required:true 
     },
     universoPrimario:{

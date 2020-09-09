@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-34:12
 MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\Paulr\.gradle\caches\transforms-2\files-2.1\eddd3afdd70de58f8cd62a2efe1aaa1b\jetified-core-ktx-1.3.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Paulr\.gradle\caches\transforms-2\files-2.1\e46f3e16fd8948e8e4c48c913cb404d3\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Paulr\.gradle\caches\transforms-2\files-2.1\0686ca90b872620e1e93c4a9f2d2181e\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
@@ -26,20 +26,20 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Paulr\.gradle\ca
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Paulr\.gradle\caches\transforms-2\files-2.1\c20b3a9c01fac1c58487516ff423d6b0\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Paulr\.gradle\caches\transforms-2\files-2.1\68a64a089b7f098f26bb791f76de8be0\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Paulr\.gradle\caches\transforms-2\files-2.1\24d5b49fe2b36ef44f901a0f8118cef3\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:3:5-47
 		INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-32:12
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-32:12
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:2:11-69
@@ -52,7 +52,7 @@ ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-p
 	android:name
 		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:8:5-30:19
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:8:5-32:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Paulr\.gradle\caches\transforms-2\files-2.1\0686ca90b872620e1e93c4a9f2d2181e\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Paulr\.gradle\caches\transforms-2\files-2.1\0686ca90b872620e1e93c4a9f2d2181e\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.3.0] C:\Users\Paulr\.gradle\caches\transforms-2\files-2.1\8106c9afeb27cc0c50f85995740f877c\core-1.3.0\AndroidManifest.xml:24:5-89
@@ -75,48 +75,56 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Pa
 		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:14:9-40
 	android:usesCleartextTraffic
 		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:15:9-44
+activity#com.example.examen_1b_univ_alien.ListViewHttpAlienActivity
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:16:9-72
+	android:name
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:16:19-60
+activity#com.example.examen_1b_univ_alien.ListViewHttpUniversActivity
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:17:9-65
+	android:name
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:17:19-62
 activity#com.example.examen_1b_univ_alien.HttpActivity
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:16:9-59
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:18:9-50
 	android:name
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:16:19-47
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:18:19-47
 activity#com.example.examen_1b_univ_alien.FormularioEdicionUniverso
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:17:9-63
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:19:9-63
 	android:name
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:17:19-60
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:19:19-60
 activity#com.example.examen_1b_univ_alien.FormularioCrearUniverso
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:18:9-61
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:20:9-61
 	android:name
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:18:19-58
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:20:19-58
 activity#com.example.examen_1b_univ_alien.ListViewUniversoActivity
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:19:9-62
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:21:9-62
 	android:name
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:19:19-59
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:21:19-59
 activity#com.example.examen_1b_univ_alien.FormularioEdicionAlien
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:20:9-60
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:22:9-60
 	android:name
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:20:19-57
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:22:19-57
 activity#com.example.examen_1b_univ_alien.FormularioCrearAlien
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:21:9-58
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:23:9-58
 	android:name
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:21:19-55
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:23:19-55
 activity#com.example.examen_1b_univ_alien.ListViewAlienActivity
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:22:9-59
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:24:9-59
 	android:name
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:22:19-56
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:24:19-56
 activity#com.example.examen_1b_univ_alien.MainActivity
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:23:9-29:20
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:25:9-31:20
 	android:name
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:23:19-47
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:25:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml:29:27-74
 uses-sdk
 INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Paulr\Documents\Git-Kraken\mov-reinoso-alvarado-washington-paul\Examen1BUnivAlien\app\src\main\AndroidManifest.xml

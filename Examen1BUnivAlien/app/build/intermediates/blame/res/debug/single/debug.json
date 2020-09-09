@@ -8,6 +8,10 @@
         "source": "C:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\src\\main\\res\\layout\\activity_list_view_universo.xml"
     },
     {
+        "merged": "C:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_list_view_http_univers.xml.flat",
+        "source": "C:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\src\\main\\res\\layout\\activity_list_view_http_univers.xml"
+    },
+    {
         "merged": "C:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -58,6 +62,10 @@
     {
         "merged": "C:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_list_view_http_alien.xml.flat",
+        "source": "C:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\src\\main\\res\\layout\\activity_list_view_http_alien.xml"
     },
     {
         "merged": "C:\\Users\\Paulr\\Documents\\Git-Kraken\\mov-reinoso-alvarado-washington-paul\\Examen1BUnivAlien\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
