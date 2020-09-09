@@ -14,11 +14,11 @@ module.exports = {
         type:"string"
       },
       alturaAlien:{
-        type:'Float',
+        type:'number',
         required:true
       },
       pesoAlien:{
-        type:'Float',
+        type:'number',
         required:true 
       },
       edadAlien:{

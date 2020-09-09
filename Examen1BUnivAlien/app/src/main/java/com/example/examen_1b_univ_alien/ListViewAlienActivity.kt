@@ -153,8 +153,6 @@ class ListViewAlienActivity : AppCompatActivity() {
         Log.i("List-view","position $valorRaza,$valorEdad,$valorOstilidad,$valorAltura,$valorUniverso,$valorPeso")
     }
 
-
-
     fun irFormularioAliens(){
         val intentException= Intent(
             this,

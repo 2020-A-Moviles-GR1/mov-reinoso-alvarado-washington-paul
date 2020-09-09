@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".HttpActivity"></activity>
+        <activity android:name=".ListViewHttpAlienActivity"></activity>
+        <activity android:name=".ListViewHttpUniversActivity" />
+        <activity android:name=".HttpActivity" />
         <activity android:name=".FormularioEdicionUniverso" />
         <activity android:name=".FormularioCrearUniverso" />
         <activity android:name=".ListViewUniversoActivity" />
