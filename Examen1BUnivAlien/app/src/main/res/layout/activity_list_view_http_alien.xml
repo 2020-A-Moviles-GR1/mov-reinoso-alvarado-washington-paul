@@ -7,10 +7,10 @@
     tools:context=".ListViewHttpAlienActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/edt_alienHttp"
         android:layout_width="276dp"
         android:layout_height="51dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="Ingresar raza del Alien"
         android:inputType="textPersonName"
@@ -23,12 +23,13 @@
         android:id="@+id/lv_aliensHttp"
         android:layout_width="392dp"
         android:layout_height="314dp"
+        android:layout_marginBottom="264dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.335" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_alienHttp"
+        app:layout_constraintVertical_bias="0.327" />
 
     <Button
         android:id="@+id/btn_creaAlienHttp"

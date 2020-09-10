@@ -58,6 +58,11 @@ class UniversoHttp (
             return arrayOfNulls(size)
         }
     }
+
+    override fun toString ():String{
+        return "${nombreUniverso},${antiguedadUniverso},${tamanioUniverso},${minTemperatura},${universoPrimario}\n"
+    }
+
 }
 // video para intent con objeto parcelable
 //https://web.microsoftstream.com/video/9806b4b8-90b6-4ac2-957b-a0a0b2b37573

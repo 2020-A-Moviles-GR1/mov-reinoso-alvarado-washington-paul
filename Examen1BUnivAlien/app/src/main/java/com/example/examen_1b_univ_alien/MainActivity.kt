@@ -14,16 +14,18 @@ class MainActivity : AppCompatActivity() {
 
     btn_menu_aliens
         .setOnClickListener({ boton->
-            irListViewAliens()
+            irHttpAlien()
+            //irListViewAliens()
         })
     btn_menu_universo
          .setOnClickListener({boton->
-             irListViewUniverso()
+             //irListViewUniverso()
+             irHttp()
     })
 
     btn_http
         .setOnClickListener({boton->
-           irHttp()
+           irHttpAlien()
         })
 
     }
@@ -31,11 +33,18 @@ class MainActivity : AppCompatActivity() {
     fun irHttp(){
         val intentException= Intent(
             this,
-            HttpActivity::class.java
+            ListViewHttpUniversActivity::class.java
         )
         startActivity(intentException)
     }
 
+    fun irHttpAlien(){
+        val intentException= Intent(
+            this,
+            ListViewHttpAlienActivity::class.java
+        )
+        startActivity(intentException)
+    }
 
     fun irListViewAliens(){
         val intentException= Intent(

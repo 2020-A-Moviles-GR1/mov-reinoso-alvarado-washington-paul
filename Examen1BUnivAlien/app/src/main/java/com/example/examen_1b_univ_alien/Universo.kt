@@ -7,7 +7,7 @@ class Universo(
     var minTemperatura: Double,
     var universoPrimario:Boolean
 ){
-    //funciones de la clase aqui
+
     override fun toString ():String{
         return "${nombreUniverso},${antiguedadUniverso},${tamanioUniverso},${minTemperatura},${universoPrimario}\n"
     }

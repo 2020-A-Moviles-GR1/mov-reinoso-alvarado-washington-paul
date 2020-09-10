@@ -22,25 +22,6 @@ class HttpActivity : AppCompatActivity() {
     }
 
     fun obtenerUniversos() {
-      /*  val pokemonString ="""
-            {
-            "createdAt": 1597678853356,
-            "updatedAt": 1597678879582,
-            "id": 2,
-            "nombre": "pikachu",
-            "usuario": 1,
-            "batalla": 1
-          }
-          """.trimIndent()
-
-        val pokemonInstancia= Klaxon()
-            .parse<UniversoHttp>(universoString)
-
-        if(pokemonInstancia!=null){
-            Log.i("http-klaxon", "Nombre: ${pokemonInstancia.nombre}")
-            Log.i("http-klaxon", "FechaCreacion: ${pokemonInstancia.fechaCreacion}")
-        }*/
-
         val url = urlPrincipal + "/universo"
         url
             .httpGet()
@@ -48,8 +29,7 @@ class HttpActivity : AppCompatActivity() {
                 when (result) {
                     is Result.Success -> {
                         val data = result.get()
-                        Log.i("http-klaxon", "Data: ${data}")
-
+                        //Log.i("http-klaxon", "Data: ${data}")
                         val universos=Klaxon()
                             .parseArray<UniversoHttp>(data)
 
@@ -59,14 +39,11 @@ class HttpActivity : AppCompatActivity() {
                             }
                         }
                     }
-
                     is Result.Failure -> {
                         val ex = result.getException()
                         Log.i("http-klaxon", "Error: ${ex.message}")
                     }
                 }
             }
+        }
     }
-
-
-}

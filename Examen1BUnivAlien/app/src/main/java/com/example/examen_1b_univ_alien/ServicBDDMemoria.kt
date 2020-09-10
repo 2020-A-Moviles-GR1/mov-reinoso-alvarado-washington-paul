@@ -12,11 +12,11 @@ class ServicBDDMemoria {
         val listaUniverso = arrayListOf<Universo>()
 
         fun ListaAliensLlena() {
-            this.listaAlien.add(Alien("Kitsune", 1.9F, 30.7, 21, false, "universo-B-32"))
-            this.listaAlien.add(Alien("Omicroniano", 2.23F, 50.4, 25, true, "universo-A-554"))
-            this.listaAlien.add(Alien("Lican", 1.9F, 30.7, 21, false, "universo-ZM-32"))
-            this.listaAlien.add(Alien("Draconiano", 2.23F, 50.4, 25, true, "universo-A-554"))
-            this.listaAlien.add(Alien("Kish", 1.9F, 30.7, 21, false, "universo-ZM-32"))
+            //this.listaAlien.add(Alien("Kitsune", 1.9F, 30.7, 21, false, "universo-B-32"))
+            //this.listaAlien.add(Alien("Omicroniano", 2.23F, 50.4, 25, true, "universo-A-554"))
+            //this.listaAlien.add(Alien("Lican", 1.9F, 30.7, 21, false, "universo-ZM-32"))
+            //this.listaAlien.add(Alien("Draconiano", 2.23F, 50.4, 25, true, "universo-A-554"))
+            //this.listaAlien.add(Alien("Kish", 1.9F, 30.7, 21, false, "universo-ZM-32"))
         }
 
         fun añadirCrearAlienigena(
