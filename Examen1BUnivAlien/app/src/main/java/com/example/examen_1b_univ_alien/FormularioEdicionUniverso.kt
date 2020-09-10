@@ -3,29 +3,31 @@ package com.example.examen_1b_univ_alien
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.github.kittinunf.fuel.httpPost
+import com.github.kittinunf.fuel.httpPut
+import com.github.kittinunf.result.Result
 import kotlinx.android.synthetic.main.activity_formulario_edicion_alien.*
 import kotlinx.android.synthetic.main.activity_formulario_edicion_universo.*
 
 class FormularioEdicionUniverso : AppCompatActivity() {
+    val urlPrincipal = "http://192.168.0.106:1337"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_formulario_edicion_universo)
 
-        val nombreUn=intent.extras?.getString("nombreUn","")
-        val tamanioUn=intent.extras?.getFloat("tamanioUn",0.0F)
-        val temperaturaUn=intent.extras?.getDouble("temperaturaUn",0.0)
-        val antiguedadUn=intent.extras?.getInt("antiguedadUn",0)
-        val primarioUn=intent.extras?.getBoolean("primarioUn",true)
-
-        edit_editar_nombre.setText(nombreUn.toString())
-        edit_editar_tamanio.setText(tamanioUn.toString())
-        edit_editar_temperatura.setText(temperaturaUn.toString())
-        edit_editar_antiguedad.setText(antiguedadUn.toString())
-        edit_editar_primario.setText(primarioUn.toString())
+        val universo= intent.getParcelableExtra<UniversoHttp>("universoA")
+        if(universo!=null){
+            edit_editar_nombre.setText(universo.nombreUniverso.toString())
+            edit_editar_tamanio.setText(universo.tamanioUniverso.toString())
+            edit_editar_temperatura.setText(universo.minTemperatura.toString())
+            edit_editar_antiguedad.setText(universo.antiguedadUniverso.toString())
+            edit_editar_primario.setText(universo.universoPrimario.toString())
+        }
 
         btn_editar_UniversoE
             .setOnClickListener({boton->
-                almacenarDatosEsdicion()
+                actualizarUniverso(universo)
             })
 
         btn_cancelar_editar_UniversoE
@@ -34,25 +36,39 @@ class FormularioEdicionUniverso : AppCompatActivity() {
             })
     }
 
-    fun almacenarDatosEsdicion(){
-
+    fun actualizarUniverso(univ:UniversoHttp) {
         val nombreEditada=edit_editar_nombre.getText().toString()
-        val tamanioEditada=edit_editar_tamanio.getText().toString().toFloat()
+        val tamanioEditada=edit_editar_tamanio.getText().toString().toDouble()
         val temperaturaEditada=edit_editar_temperatura.getText().toString().toDouble()
         val antiguedadEditada=edit_editar_antiguedad.getText().toString().toInt()
         val primarioEditada=edit_editar_primario.getText().toString().toBoolean()
 
-
+        val url = urlPrincipal + "/universo/"+univ.id
+        val parametroUusuario: List<Pair<String, String>> = listOf( //lista de clave valores
+            "nombreUniverso" to "${nombreEditada}",
+            "antiguedadUniverso" to "${antiguedadEditada}",
+            "tamanioUniverso" to "${tamanioEditada}",
+            "minTemperatura" to "${temperaturaEditada}",
+            "universoPrimario" to "${primarioEditada}"
+        )
+        url
+            .httpPut(parametroUusuario)
+            .responseString { request, response, result ->
+                when (result) {
+                    is Result.Failure -> {
+                        val error = result.getException()
+                        Log.i("http-klaxon", "Nombre: ${error}")
+                    }
+                    is Result.Success -> {
+                        val usuarioString = result.get()
+                        Log.i("http-klaxon", "Nombre: ${usuarioString}")
+                    }
+                }
+            }
         val intentException= Intent(
             this,
-            ListViewUniversoActivity::class.java
+            ListViewHttpUniversActivity::class.java
         )
-        intentException.putExtra("nombreUEdit",nombreEditada)
-        intentException.putExtra("tamanioUEdit",tamanioEditada)
-        intentException.putExtra("temperaturaUEdit",temperaturaEditada)
-        intentException.putExtra("antiguedadUEdit",antiguedadEditada)
-        intentException.putExtra("primarioUEdit",primarioEditada)
-
         limpiarCampos()
         startActivity(intentException)
     }
@@ -69,10 +85,8 @@ class FormularioEdicionUniverso : AppCompatActivity() {
     fun irListViewUniverso(){
         val intentException= Intent(
             this,
-            ListViewUniversoActivity::class.java
+            ListViewHttpUniversActivity::class.java
         )
         startActivity(intentException)
     }
-
-
 }

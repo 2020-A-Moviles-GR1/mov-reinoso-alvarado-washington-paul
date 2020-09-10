@@ -790,8 +790,6 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
-id editTextTextPersonName
-id editTextTextPersonName2
 id edit_editar_altura
 id edit_editar_antiguedad
 id edit_editar_edad
@@ -804,6 +802,7 @@ id edit_editar_tamanio
 id edit_editar_temperatura
 id edit_editar_univers
 id edit_query
+id edt_alienHttp
 id edt_altura
 id edt_antiguedad
 id edt_edad
@@ -817,6 +816,7 @@ id edt_temperatura
 id edt_text_alien
 id edt_text_universo
 id edt_universo
+id edt_universoHttp
 id end
 id expand_activities_button
 id expanded_menu
