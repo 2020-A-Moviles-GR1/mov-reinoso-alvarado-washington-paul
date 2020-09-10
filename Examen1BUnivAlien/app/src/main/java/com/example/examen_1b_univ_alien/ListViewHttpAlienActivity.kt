@@ -64,10 +64,9 @@ class ListViewHttpAlienActivity : AppCompatActivity() {
             .setOnClickListener{boton->
                 val alienB=listaAliens.get(posicion)
                 Log.i("http-klaxon", "Universo Select:  ${alienB}")
-                eliminarAlien(alienB.id)
+                //eliminarAlien(alienB.id)
+                showDialogAlertSimple(alienB.id)
             }
-
-
 
     }
     // funciones
@@ -176,13 +175,14 @@ class ListViewHttpAlienActivity : AppCompatActivity() {
                     //val indiceBorra=pos
                     //ServicBDDMemoria.eliminarAlien(indiceBorra)
                     //vandera=true
+                    eliminarAlien(pos)
                     this.startActivity(intent)
                 })
             .setNegativeButton(android.R.string.cancel,
                 DialogInterface.OnClickListener { dialog, which ->
                     //botón cancel pulsado**
-                    //vandera=false
-                    //Log.i("List","position $vandera")
+                    vandera=false
+                    Log.i("List","position $vandera")
                 })
             .show()
     }

@@ -1,11 +1,13 @@
 package com.example.examen_1b_univ_alien
 
 import android.app.PendingIntent.getActivity
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.beust.klaxon.Klaxon
 import com.github.kittinunf.fuel.httpDelete
@@ -64,7 +66,8 @@ class ListViewHttpUniversActivity : AppCompatActivity() {
             .setOnClickListener{boton->
                 val universoB=listaUniversos.get(posicion)
                 Log.i("http-klaxon", "Universo Select:  ${universoB}")
-                eliminarUniversoHttp(universoB.id)
+                //eliminarUniversoHttp(universoB.id)
+                showDialogAlertSimple(universoB.id)
             }
     }
 
@@ -159,6 +162,29 @@ class ListViewHttpUniversActivity : AppCompatActivity() {
         )
         //this.startActivity(intentException) metodo dentro de la clase
         startActivity(intentException)
+    }
+
+    fun showDialogAlertSimple(pos:Int) {
+        var vandera=false
+        AlertDialog.Builder(this)
+            .setTitle("Confirmar eliminación")
+            .setMessage("Seguro desea eliminar este Universo?")
+            .setPositiveButton(android.R.string.ok,
+                DialogInterface.OnClickListener { dialog, which ->
+                    //botón OK pulsado**
+                    //val indiceBorra=pos
+                    //ServicBDDMemoria.eliminarAlien(indiceBorra)
+                    //vandera=true
+                    eliminarUniversoHttp(pos)
+                    this.startActivity(intent)
+                })
+            .setNegativeButton(android.R.string.cancel,
+                DialogInterface.OnClickListener { dialog, which ->
+                    //botón cancel pulsado**
+                    vandera=false
+                    Log.i("List","position $vandera")
+                })
+            .show()
     }
 
 }

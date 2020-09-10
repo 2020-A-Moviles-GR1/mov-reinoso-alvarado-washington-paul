@@ -10,12 +10,12 @@
         android:id="@+id/edt_alienHttp"
         android:layout_width="276dp"
         android:layout_height="51dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="Ingresar raza del Alien"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,18 +23,16 @@
         android:id="@+id/lv_aliensHttp"
         android:layout_width="392dp"
         android:layout_height="314dp"
-        android:layout_marginBottom="264dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_alienHttp"
-        app:layout_constraintVertical_bias="0.327" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_alienHttp" />
 
     <Button
         android:id="@+id/btn_creaAlienHttp"
         android:layout_width="394dp"
-        android:layout_height="57dp"
+        android:layout_height="43dp"
         android:text="CREAR"
         app:layout_constraintEnd_toEndOf="@+id/lv_aliensHttp"
         app:layout_constraintStart_toStartOf="@+id/lv_aliensHttp"
@@ -42,8 +40,8 @@
 
     <Button
         android:id="@+id/btn_eliminarAlienHttp"
-        android:layout_width="394dp"
-        android:layout_height="57dp"
+        android:layout_width="396dp"
+        android:layout_height="41dp"
         android:text="eliminar"
         app:layout_constraintEnd_toEndOf="@+id/btn_actualizarAlienHttp"
         app:layout_constraintStart_toStartOf="@+id/btn_actualizarAlienHttp"
@@ -51,8 +49,8 @@
 
     <Button
         android:id="@+id/btn_actualizarAlienHttp"
-        android:layout_width="394dp"
-        android:layout_height="57dp"
+        android:layout_width="398dp"
+        android:layout_height="45dp"
         android:text="actualizar"
         app:layout_constraintEnd_toEndOf="@+id/lv_aliensHttp"
         app:layout_constraintStart_toStartOf="@+id/lv_aliensHttp"
@@ -60,8 +58,8 @@
 
     <Button
         android:id="@+id/btn_buscarAlienHttp"
-        android:layout_width="394dp"
-        android:layout_height="57dp"
+        android:layout_width="396dp"
+        android:layout_height="45dp"
         android:text="buscar"
         app:layout_constraintEnd_toEndOf="@+id/lv_aliensHttp"
         app:layout_constraintStart_toStartOf="@+id/lv_aliensHttp"
