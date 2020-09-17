@@ -6,14 +6,13 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="http-klaxon" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="mapa" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9463a57-73cf-4310-8fb2-759272eec6f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/moviles_1/MapsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/moviles_1/MapsActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Examen1BUnivAlien/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen1BUnivAlien/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -214,10 +213,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="402" y="10" key="#app/0.0.1366.728@0.0.1366.728" timestamp="1599481272592" />
-    <state x="474" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1599078981905">
+    <state x="474" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1600302503694">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="474" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1599078981905" />
+    <state x="474" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1600302503694" />
     <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1599137864790">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
