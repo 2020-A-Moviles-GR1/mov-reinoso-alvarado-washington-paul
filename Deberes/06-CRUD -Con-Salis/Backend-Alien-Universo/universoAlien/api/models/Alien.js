@@ -34,7 +34,7 @@ module.exports = {
         required:true,
         unique:false,
         minLength:10,
-        maxLength:25
+        maxLength:25        
       }
     /*  universo:{             //Many to One en Alien.
         model:"universo",    //referencia a universo

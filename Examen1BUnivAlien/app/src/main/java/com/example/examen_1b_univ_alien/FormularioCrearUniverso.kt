@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_formulario_crear_alien.*
 import kotlinx.android.synthetic.main.activity_formulario_crear_universo.*
 
 class FormularioCrearUniverso : AppCompatActivity() {
-    val urlPrincipal = "http://192.168.0.106:1337"
+    val urlPrincipal = "http://192.168.0.102:1337"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_formulario_crear_universo)
