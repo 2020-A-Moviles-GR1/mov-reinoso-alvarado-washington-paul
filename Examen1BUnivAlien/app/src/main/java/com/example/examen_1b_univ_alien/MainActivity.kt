@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
 
     btn_http
         .setOnClickListener({boton->
-           irHttpAlien()
+           //irHttpAlien()
+            irMapsActivity()
         })
 
     }
@@ -64,6 +65,14 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    fun irMapsActivity(){
+        val intentException= Intent(
+            this,
+            MapsActivity::class.java
+        )
+        //this.startActivity(intentException) metodo dentro de la clase
+        startActivity(intentException)
+    }
 
 
 

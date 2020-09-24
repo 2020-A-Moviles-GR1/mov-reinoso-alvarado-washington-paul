@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_list_view_http_univers.*
 class ListViewHttpUniversActivity : AppCompatActivity() {
     lateinit var listaUniversos:ArrayList<UniversoHttp>
     lateinit var adaptador :ArrayAdapter<UniversoHttp>
-    val urlPrincipal = "http://192.168.0.106:1337"
+    val urlPrincipal = "http://192.168.0.102:1337"
     var posicion:Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
