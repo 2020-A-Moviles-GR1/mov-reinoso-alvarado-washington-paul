@@ -1,29 +1,24 @@
 package com.example.examen_1b_univ_alien
 
+import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Color
-import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatDrawableManager.get
 import androidx.core.content.ContextCompat
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
 import com.squareup.picasso.Picasso
-import java.lang.reflect.Array.get
-import java.net.URL
-import java.nio.file.Paths.get
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
-
     private lateinit var mMap: GoogleMap
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
@@ -47,10 +42,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         establecerConfiguracionMapa(mMap)
         EstrablecerPosiciones()
 
-        // Add a marker in Sydney and move the camera
-        //val sydney = LatLng(-34.0, 151.0)
-        //mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+
     }
 
     fun EstrablecerPosiciones(){
@@ -61,7 +53,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val origenTres = LatLng(-0.243584, -78.538880)
         val origenCuatro = LatLng(-0.243603, -78.539277)
 
-        mMap.addMarker(MarkerOptions().position(origen).title("Paul"))
+        mMap.addMarker(MarkerOptions().position(origen).title("Paul uno"))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(origen, 18F))
 
         val circle: Circle = mMap.addCircle(
@@ -74,27 +66,25 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .clickable(true)
         )
 
-        val url = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/38c109ad-e096-41f5-a3f9-517a757e5ab2/d6vxse2-8322106a-99ad-439b-9675-6d3588c6c782.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMzhjMTA5YWQtZTA5Ni00MWY1LWEzZjktNTE3YTc1N2U1YWIyXC9kNnZ4c2UyLTgzMjIxMDZhLTk5YWQtNDM5Yi05Njc1LTZkMzU4OGM2Yzc4Mi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.4UgVWHHobLvr3O4oe-hSoPKvTBb3F9XqiNSxXgWGroA"
-        val picasso = Picasso.get()
-        //picasso.load(url).into(posterImageView)//agrega el luga donde se pondra la imagen
-
-        /*Picasso.get().load(url).into(object : com.squareup.picasso.Target {
-            override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
-                // loaded bitmap is here (bitmap)
-            }
-            override fun onPrepareLoad(placeHolderDrawable: Drawable?) {}
-            override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {}
-        })*/
-
-        //val bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+        val url = "https://www.pngitem.com/pimgs/m/661-6619038_alien-chibi-hd-png-download.png"
 
         val melbourne = mMap.addMarker(
-            MarkerOptions().position(origenUno)
-                .icon(
-                    BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)
-                )
-                .title("Paul")
-        )
+            MarkerOptions()
+                .position(origenUno)
+                .title("Paul"))
+
+        val marker = PicassoMarker(melbourne);
+        Picasso.with(this).load(url).resize(100, 100).into(marker);
+
+        mMap.setOnMarkerClickListener(OnMarkerClickListener { melbourne ->
+            val uri: Uri = Uri.parse("https://www.pngitem.com/pimgs/m/661-6619038_alien-chibi-hd-png-download.png")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+            true
+        })
+
+
+
 
         val melbourneDos = mMap.addMarker(
             MarkerOptions().position(origenDos)
@@ -102,7 +92,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)
                 )
-                .title("Paul")
+                .title("Paul 3")
         )
 
         val melbourneTres = mMap.addMarker(
@@ -111,7 +101,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)
                 )
-                .title("Paul")
+                .title("Paul 4")
         )
 
         val melbourneCuatro = mMap.addMarker(
@@ -120,7 +110,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)
                 )
-                .title("Paul")
+                .title("Paul 5")
         )
 
     }
@@ -142,6 +132,4 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             uiSettings.isMyLocationButtonEnabled=true
         }
     }
-
-
 }
