@@ -69,6 +69,19 @@ class ListViewHttpUniversActivity : AppCompatActivity() {
                 //eliminarUniversoHttp(universoB.id)
                 showDialogAlertSimple(universoB.id)
             }
+
+        btn_mostrar_hijos
+            .setOnClickListener {
+                val universoB=listaUniversos.get(posicion)
+                Log.i("http-klaxon", "Universo Select:  ${universoB}")
+                val intentException= Intent(
+                    this,
+                    MapsActivity::class.java
+                )
+                intentException.putExtra("universoA",universoB)
+                startActivity(intentException)
+
+            }
     }
 
     fun obtenerUniversos() {

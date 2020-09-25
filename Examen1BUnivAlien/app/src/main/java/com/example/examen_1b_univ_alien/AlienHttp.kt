@@ -13,8 +13,13 @@ class AlienHttp (
     val pesoAlien: Double,
     val edadAlien: Int,
     val ostilidadAlien: Boolean,
-    val nombreUniverso : String?
-):Parcelable{
+    val nombreUniverso : String?,
+    val latitud : String?,
+    val longitud : String?,
+    val url : String?
+
+
+    ):Parcelable{
 
     var fechaCreacion : Date
     var fechaActualizacion : Date
@@ -28,6 +33,9 @@ class AlienHttp (
         parcel.readDouble(),
         parcel.readInt(),
         parcel.readByte() != 0.toByte(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString()
     ) {
 
@@ -48,6 +56,9 @@ class AlienHttp (
         parcel.writeInt(edadAlien)
         parcel.writeByte(if (ostilidadAlien) 1 else 0)
         parcel.writeString(nombreUniverso)
+        parcel.writeString(latitud)
+        parcel.writeString(longitud)
+        parcel.writeString(url)
     }
 
     override fun describeContents(): Int {
