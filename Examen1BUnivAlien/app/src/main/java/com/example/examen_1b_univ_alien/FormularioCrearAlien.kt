@@ -34,10 +34,14 @@ class FormularioCrearAlien : AppCompatActivity() {
         val valorEdad = edt_edad.getText().toString().toInt()
         val valorOstilidad = edt_ostilidad.getText().toString().toBoolean()
         val valorUniverso = edt_universo.getText().toString()
+        val latitud =edt_latitud.getText().toString()
+        val longitud =edt_longitud.getText().toString()
+        val url =edt_url.getText().toString()
 
         val createdAt=12345325346
         val updatedAt=12345234234
         val id=0
+
 
         val alien=AlienHttp(
             createdAt,
@@ -48,7 +52,10 @@ class FormularioCrearAlien : AppCompatActivity() {
             valorPeso,
             valorEdad,
             valorOstilidad,
-            valorUniverso
+            valorUniverso,
+            latitud,
+            longitud,
+            url
         )
         return alien
     }
@@ -62,7 +69,10 @@ class FormularioCrearAlien : AppCompatActivity() {
             "pesoAlien" to "${alien.pesoAlien}",
             "edadAlien" to "${alien.edadAlien}",
             "ostilidadAlien" to "${alien.ostilidadAlien}",
-            "nombreUniverso" to "${alien.nombreUniverso}"
+            "nombreUniverso" to "${alien.nombreUniverso}",
+            "latitud" to "${alien.latitud}",
+            "longitud" to "${alien.longitud}",
+            "url" to "${alien.url}"
         )
         url
             .httpPost(parametroUusuario)

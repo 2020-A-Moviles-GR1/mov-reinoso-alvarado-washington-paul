@@ -836,6 +836,7 @@ id btn_eliminar_universo
 id btn_http
 id btn_menu_aliens
 id btn_menu_universo
+id btn_mostrar_hijos
 id btn_obHttp
 id btn_refrescarU
 id buttonPanel
@@ -872,6 +873,8 @@ id edt_alienHttp
 id edt_altura
 id edt_antiguedad
 id edt_edad
+id edt_latitud
+id edt_longitud
 id edt_nombre
 id edt_ostilidad
 id edt_peso
@@ -883,6 +886,7 @@ id edt_text_alien
 id edt_text_universo
 id edt_universo
 id edt_universoHttp
+id edt_url
 id end
 id expand_activities_button
 id expanded_menu

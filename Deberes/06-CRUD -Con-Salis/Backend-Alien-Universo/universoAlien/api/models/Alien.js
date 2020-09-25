@@ -35,7 +35,20 @@ module.exports = {
         unique:false,
         minLength:10,
         maxLength:25        
+      },
+      latitud:{ 
+        type:'String',                
+        minLength:3
+      },
+      longitud:{ 
+        type:'String',                
+        minLength:3
+      },
+      url:{ 
+        type:'String',                
+        minLength:10
       }
+
     /*  universo:{             //Many to One en Alien.
         model:"universo",    //referencia a universo
         required:true       //opcional y depende de la logica de negocio
